@@ -1,3 +1,4 @@
+const { Socket } = require("dgram");
 const net = require("net");
 
 // establishes a connection with the game server
@@ -13,8 +14,8 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: YHU");
+    
   });
-  
   
 
   conn.on("data", (data) => {
